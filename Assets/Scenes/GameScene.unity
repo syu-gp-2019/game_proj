@@ -637,79 +637,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 83792629}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &103323224
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 100000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_Name
-      value: HeadQuarters
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -70
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2300000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 379dad8cfce3c47c09a051a0d87ca28a, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 71168782495474ac69411fd475ef70e6, type: 3}
 --- !u!1001 &106734312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4489,7 +4416,7 @@ PrefabInstance:
     - target: {fileID: 6618276852388659528, guid: 2017cba26d27b4364bd46822c056653b,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseMissileTurret
+      value: SelectMissileTurret
       objectReference: {fileID: 0}
     - target: {fileID: 6618276852388659531, guid: 2017cba26d27b4364bd46822c056653b,
         type: 3}
@@ -5211,6 +5138,7 @@ GameObject:
   - component: {fileID: 700032650}
   - component: {fileID: 700032649}
   - component: {fileID: 700032651}
+  - component: {fileID: 700032652}
   m_Layer: 0
   m_Name: GameMaster
   m_TagString: Untagged
@@ -5265,6 +5193,19 @@ MonoBehaviour:
     type: 3}
   MissileTurretPrefab: {fileID: 5699046242506103301, guid: 73597523e805143a6927e0b7d3dceda0,
     type: 3}
+--- !u!114 &700032652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700032648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1d31a451c834aff912ec7963e7434e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startMoney: 400
 --- !u!1001 &713370062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9717,7 +9658,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1161194214
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17467,7 +17408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0.392}
+  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -17503,6 +17444,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7004f703786834e96a4566dc23c1864b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standardTurret:
+    prefab: {fileID: 5946493086984866447, guid: 1836b46a16d684205ac3c86291cc0989,
+      type: 3}
+    cost: 100
+  missileLauncher:
+    prefab: {fileID: 5699046242506103301, guid: 73597523e805143a6927e0b7d3dceda0,
+      type: 3}
+    cost: 250
 --- !u!4 &2063149969 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4532719515012281675, guid: 46d56b1d103b54ec8b444fd1bb5ceb24,
@@ -18725,6 +18674,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2061295269}
+    - target: {fileID: 6618276852388659528, guid: 2017cba26d27b4364bd46822c056653b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SelectStandartTurret
+      objectReference: {fileID: 0}
     - target: {fileID: 6618276852388659531, guid: 2017cba26d27b4364bd46822c056653b,
         type: 3}
       propertyPath: m_Sprite
